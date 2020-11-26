@@ -15,7 +15,7 @@
 
 我们可以通过下面的 `gif` 图片来对 `vue-next-renting` 有一个更深的了解（[图片未打开？](http://res.lgdsunday.club/renting-overview.gif)）。
 
-<img src="http://res.lgdsunday.club/renting-overview.gif" alt="renting-overview" style="zoom:80%;" />
+<img src="https://res.lgdsunday.club/renting-overview.gif" alt="renting-overview" style="zoom:80%;" />
 
 
 
