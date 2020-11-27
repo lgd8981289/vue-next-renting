@@ -6,10 +6,24 @@
     "build": "vite build"
   },
   "dependencies": {
-    "vue": "^3.0.0-rc.1"
+    "@amap/amap-jsapi-loader": "^0.0.4",
+    "@bundled-es-modules/axios": "^0.18.1",
+    "amfe-flexible": "^2.2.1",
+    "animejs": "^3.2.1",
+    "dayjs": "^1.9.1",
+    "lodash-es": "^4.17.15",
+    "mitt": "^2.1.0",
+    "swiper": "^6.3.3",
+    "three": "^0.122.0",
+    "vant": "^3.0.0-beta.8",
+    "vue": "^3.0.2",
+    "vue-router": "^4.0.0-rc.1",
+    "vuex": "^4.0.0-rc.1"
   },
   "devDependencies": {
-    "vite": "^1.0.0-rc.1",
-    "@vue/compiler-sfc": "^3.0.0-rc.1"
+    "@vue/compiler-sfc": "^3.0.2",
+    "postcss-pxtorem": "^5.1.1",
+    "sass": "^1.27.0",
+    "vite": "^1.0.0-rc.4"
   }
 }
