@@ -1,7 +1,5 @@
 # vue-next-renting
 
-
-
 ## 简介
 
 `vue-next-renting` 是一个基于 `vite + vue3` 构建的移动端[视频课程项目](#jump)。
@@ -15,9 +13,7 @@
 
 我们可以通过下面的 `gif` 图片来对 `vue-next-renting` 有一个更深的了解（[图片未打开？](http://res.lgdsunday.club/renting-overview.gif)）。
 
-<img src="https://res.lgdsunday.club/renting-overview.gif" alt="renting-overview" style="zoom:80%;" />
-
-
+<img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/bc6773e503d643d08795c35816c220f2~tplv-k3u1fbpfcp-zoom-1.image" alt="renting-overview" />
 
 ## 涉及到的技术点
 
@@ -44,7 +40,11 @@
 - A：收费
 - B：免费
 
-欢迎大家先 `star` 这个项目，后续该项目的所有代码将会被 `push`到该仓库中，视频课程的发布形式亦会在本仓库中公布。
+欢迎大家 `star` ，后续该项目的所有代码将会被 `push`到该仓库中，视频课程的发布形式亦会在本仓库中公布。
+
+## 接口文档
+
+[点击跳转接口文档地址](https://github.com/lgd8981289/vue-next-renting/blob/master/%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3.md)
 
 ## 声明
 
