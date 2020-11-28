@@ -1,10 +1,16 @@
 <template>
-  <div class="home">home</div>
+  <div class="home">
+    <home-options></home-options>
+  </div>
 </template>
 
 <script>
+import HomeOptions from './components/HomeOptions.vue';
 export default {
-  name: 'Home'
+  name: 'Home',
+  components: {
+    HomeOptions
+  }
 };
 </script>
 

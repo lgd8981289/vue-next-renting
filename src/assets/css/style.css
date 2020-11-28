@@ -145,6 +145,11 @@ table {
   text-overflow: ellipsis;
 }
 
+/* 背景色 */
+#app {
+  background-color: #f4f4f4;
+}
+
 /* tabbar 选中色 */
 .van-tabbar-item--active {
   color: #26ce97;
