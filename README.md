@@ -53,7 +53,7 @@
 
 ### 提交
 
-- 提交规范：key: value。比如：新增 首页 -> feat: feat home / feat 首页
+- 提交规范：key: value。比如：新增 首页 -> feat: home / 首页
 - key 可选：
 
   ```
