@@ -40,6 +40,11 @@
         </div>
       </template>
     </floor-scroll>
+    <van-popup v-model:show="isReachFloor" position="bottom" :style="{ height: '100%' }">
+      <van-button type="primary" @click="isReachFloor = !isReachFloor"
+        >已经入二楼，在此可处理响应业务，点击返回一楼</van-button
+      >
+    </van-popup>
   </div>
 </template>
 

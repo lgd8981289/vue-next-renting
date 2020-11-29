@@ -9,7 +9,8 @@ import {
   List,
   Tag,
   Divider,
-  Tab
+  Tab,
+  Popup
 } from 'vant';
 import 'vant/lib/index.css';
 
@@ -25,4 +26,5 @@ export default function initVant(app) {
   app.use(Divider);
   app.use(Tag);
   app.use(Tab);
+  app.use(Popup);
 }
