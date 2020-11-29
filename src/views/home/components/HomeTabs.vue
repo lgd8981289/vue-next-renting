@@ -5,6 +5,7 @@
       v-model:active="active"
       color="#26ce97"
       title-active-color="#26ce97"
+      offset-top="52"
       swipeable
       sticky
     >
