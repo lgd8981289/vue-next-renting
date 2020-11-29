@@ -154,3 +154,8 @@ table {
 .van-tabbar-item--active {
   color: #26ce97;
 }
+
+/* 分割线样式 */
+.van-divider.van-divider--hairline {
+  margin: 0 !important;
+}
