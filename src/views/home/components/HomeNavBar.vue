@@ -2,7 +2,7 @@
   <div class="home-nav-bar" :style="homeNavBarStyle">
     <div class="home-nav-bar-content">
       <div class="left" @click="toCityList">
-        <span class="nav-bar-title">中国</span>
+        <span class="nav-bar-title">{{ city }}</span>
         <i class="iconfont iconjiantou nav-bar-left-icon"></i>
       </div>
       <!-- 中 -->
@@ -33,6 +33,7 @@ const INITIAL_NAVBAR_HEIGHT = 76;
 const MIN_NAVBAR_HEIGHT = 52;
 const INITIAL_NAV_BAR_BG = '38, 206, 151';
 import { throttle } from 'lodash-es';
+import { getCity } from '/@utils/map.js';
 import HomeCard from './HomeCard.vue';
 export default {
   components: {
@@ -59,6 +60,7 @@ export default {
   created() {},
   data() {
     return {
+      city: getCity(),
       homeNavBarStyle: {
         height: INITIAL_NAVBAR_HEIGHT + 'px',
         backgroundColor: `rgba(${INITIAL_NAV_BAR_BG}, 0)`
