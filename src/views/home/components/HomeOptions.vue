@@ -48,6 +48,8 @@ export default {
 
 <style lang="scss" scoped>
 .home-options {
+  padding-top: 26px;
+  background-color: white;
   &-swiper {
     height: 180px;
     background-color: white;

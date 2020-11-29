@@ -1,18 +1,36 @@
 <template>
   <div class="home">
+    <home-nav-bar
+      @heightChange="navBarHeightChange"
+      :contentScrollTop="contentScrollTop"
+      :floorScrollRatio="floorScrollRatio"
+      :floorScrollDiff="floorScrollDiff"
+    >
+    </home-nav-bar>
     <floor-scroll
       v-model="isReachFloor"
       :isScroll="contentScrollTop === 0"
+      :tipsStyle="{ top: navBarHeight + 'px' }"
       @onMove="onFloorMoveEvent"
       @reachFloor="onReachFloor"
     >
       <!-- 二楼 -->
       <template #floor>
-        <div class="floor-container"></div>
+        <div class="floor-container">
+          <van-image
+            class="floor-container-bg"
+            src="http://res.lgdsunday.club/renting_floor_bg.jpg"
+            fit="cover"
+          ></van-image>
+        </div>
       </template>
       <!-- 一楼 -->
       <template #default>
-        <div class="content-container" @scroll="onContentScrollEvent">
+        <div
+          class="content-container"
+          @scroll="onContentScrollEvent"
+          :style="{ top: navBarHeight + 'px' }"
+        >
           <!-- 选项区 -->
           <home-options></home-options>
           <!-- 新闻区 -->
@@ -27,6 +45,7 @@
 
 <script>
 import FloorScroll from '/@components/FloorScroll.vue';
+import HomeNavBar from './components/HomeNavBar.vue';
 import HomeOptions from './components/HomeOptions.vue';
 import HomeNews from './components/HomeNews.vue';
 import HomeTabs from './components/HomeTabs.vue';
@@ -34,6 +53,7 @@ export default {
   name: 'Home',
   components: {
     FloorScroll,
+    HomeNavBar,
     HomeOptions,
     HomeNews,
     HomeTabs
@@ -47,7 +67,9 @@ export default {
       // 楼层拖动的距离
       floorScrollDiff: 0,
       // 楼层距离进入二楼节点的百分比
-      floorScrollRatio: 0
+      floorScrollRatio: 0,
+      // navbar 的高度
+      navBarHeight: 0
     };
   },
   methods: {
@@ -72,6 +94,12 @@ export default {
      */
     onReachFloor() {
       this.isReachFloor = true;
+    },
+    /**
+     * 监听 navbar 的变化
+     */
+    navBarHeightChange(height) {
+      this.navBarHeight = height;
     }
   }
 };
