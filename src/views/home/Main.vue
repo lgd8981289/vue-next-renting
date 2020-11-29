@@ -12,7 +12,7 @@
       </template>
       <!-- 一楼 -->
       <template #default>
-        <div>
+        <div class="content-container" @scroll="onContentScrollEvent">
           <!-- 选项区 -->
           <home-options></home-options>
           <!-- 新闻区 -->
@@ -56,6 +56,7 @@ export default {
      */
     onContentScrollEvent($event) {
       this.contentScrollTop = $event.target.scrollTop;
+      console.log(this.contentScrollTop);
     },
     /**
      * 楼层拖动时的回调
@@ -82,6 +83,17 @@ export default {
     height: 100vh;
     width: 100%;
     background-color: aquamarine;
+  }
+
+  .content-container {
+    height: 100vh;
+    width: 100%;
+    background-color: #f4f4f4;
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
+    position: relative;
+    box-sizing: border-box;
+    padding-bottom: 62px;
   }
 }
 </style>

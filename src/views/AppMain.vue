@@ -45,7 +45,6 @@ export default {
     box-sizing: border-box;
     height: 100%;
     padding-bottom: 50px;
-    overflow-y: auto;
   }
 }
 </style>
