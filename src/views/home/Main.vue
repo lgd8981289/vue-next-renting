@@ -28,6 +28,7 @@
       <template #default>
         <div
           class="content-container"
+          ref="content"
           @scroll="onContentScrollEvent"
           :style="{ top: navBarHeight + 'px' }"
         >
@@ -106,6 +107,9 @@ export default {
     navBarHeightChange(height) {
       this.navBarHeight = height;
     }
+  },
+  activated() {
+    this.$refs.content.scrollTop = this.contentScrollTop;
   }
 };
 </script>
