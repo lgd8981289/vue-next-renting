@@ -2,7 +2,7 @@
   <div class="home-nav-bar" :style="homeNavBarStyle">
     <div class="home-nav-bar-content">
       <div class="left" @click="toCityList">
-        <span class="nav-bar-title">{{ city }}</span>
+        <span class="nav-bar-title">{{ $store.state.city }}</span>
         <i class="iconfont iconjiantou nav-bar-left-icon"></i>
       </div>
       <!-- 中 -->
@@ -34,6 +34,7 @@ const MIN_NAVBAR_HEIGHT = 52;
 const INITIAL_NAV_BAR_BG = '38, 206, 151';
 import { throttle } from 'lodash-es';
 import { getCity } from '/@utils/map.js';
+import { useStore } from 'vuex';
 import HomeCard from './HomeCard.vue';
 export default {
   components: {
@@ -57,7 +58,10 @@ export default {
       required: true
     }
   },
-  created() {},
+  created() {
+    const sotre = useStore();
+    sotre.commit('setCity', getCity());
+  },
   data() {
     return {
       city: getCity(),

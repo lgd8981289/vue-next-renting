@@ -11,7 +11,13 @@ import {
   Divider,
   Tab,
   Popup,
-  NavBar
+  NavBar,
+  IndexBar,
+  IndexAnchor,
+  Skeleton,
+  Cell,
+  Row,
+  Col
 } from 'vant';
 import 'vant/lib/index.css';
 
@@ -29,4 +35,10 @@ export default function initVant(app) {
   app.use(Tab);
   app.use(Popup);
   app.use(NavBar);
+  app.use(IndexBar);
+  app.use(IndexAnchor);
+  app.use(Skeleton);
+  app.use(Cell);
+  app.use(Row);
+  app.use(Col);
 }

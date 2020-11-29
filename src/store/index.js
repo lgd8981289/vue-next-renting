@@ -2,9 +2,13 @@ import { createStore } from 'vuex';
 
 export default createStore({
   state: {
-    test: '测试文本'
+    city: '中国'
   },
-  mutations: {},
+  mutations: {
+    setCity(state, city) {
+      state.city = city;
+    }
+  },
   actions: {},
   modules: {}
 });

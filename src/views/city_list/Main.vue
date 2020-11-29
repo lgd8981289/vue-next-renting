@@ -1,16 +1,21 @@
 <template>
   <div class="city-list">
     <nav-bar></nav-bar>
-    <div class="city-list-container"></div>
+    <div class="city-list-container">
+      <!-- 城市列表 -->
+      <index-bar></index-bar>
+    </div>
   </div>
 </template>
 
 <script>
 import NavBar from './components/CityListNavBar.vue';
+import IndexBar from './components/IndexBar.vue';
 export default {
-  name: '',
+  name: 'CityList',
   components: {
-    NavBar
+    NavBar,
+    IndexBar
   }
 };
 </script>
