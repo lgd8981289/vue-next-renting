@@ -3,17 +3,21 @@
     <div class="house-detail-container" v-if="detailData">
       <!-- navBar -->
       <house-detail-nav-bar :title="detailData.name"></house-detail-nav-bar>
+      <!-- swiper -->
+      <house-detail-swiper :data="detailData"></house-detail-swiper>
     </div>
   </div>
 </template>
 
 <script>
 import HouseDetailNavBar from './components/HouseDetailNavBar.vue';
+import HouseDetailSwiper from './components/HouseDetailSwiper.vue';
 import { getHouse } from '/@api/house';
 export default {
   name: 'HouseDetail',
   components: {
-    HouseDetailNavBar
+    HouseDetailNavBar,
+    HouseDetailSwiper
   },
   data() {
     return {

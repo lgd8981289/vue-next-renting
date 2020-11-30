@@ -33,7 +33,7 @@ export default {
   height: 46px;
   line-height: 46px;
   .nav-bar-item {
-    color: black;
+    color: white;
     font-weight: 600;
   }
 }
