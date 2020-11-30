@@ -84,7 +84,6 @@ export default {
      */
     onContentScrollEvent($event) {
       this.contentScrollTop = $event.target.scrollTop;
-      console.log(this.contentScrollTop);
     },
     /**
      * 楼层拖动时的回调
