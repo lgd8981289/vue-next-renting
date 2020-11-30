@@ -43,8 +43,17 @@ export default {
     }
   },
   methods: {
-    // TODO：跳转到详情页
-    onItemClick() {}
+    onItemClick() {
+      this.$router.push({
+        name: 'HouseDetail',
+        query: {
+          houseId: this.data.id
+        },
+        params: {
+          routerType: 'push'
+        }
+      });
+    }
   }
 };
 </script>
