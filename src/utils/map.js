@@ -17,6 +17,27 @@ async function getLocalCity() {
   });
 }
 
+async function getGeoLocation() {
+  let AMap = window.AMap;
+  if (!AMap) {
+    AMap = await init();
+  }
+  const geolocation = new AMap.Geolocation({
+    timeout: 10 * 1000,
+    maximumAge: 24 * 3600 * 1000
+  });
+
+  return new Promise((resolve, reject) => {
+    geolocation.getCurrentPosition((status, result) => {
+      if (status == 'complete') {
+        resolve(result);
+      } else {
+        reject(result);
+      }
+    });
+  });
+}
+
 export function getAMap() {
   return init();
 }
@@ -28,4 +49,8 @@ export function getCity() {
   };
   getCity();
   return city;
+}
+
+export async function getLocation() {
+  return await getGeoLocation();
 }

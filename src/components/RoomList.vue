@@ -9,12 +9,16 @@
     >
       <room-item v-for="item in list" :key="item.id" :data="item"></room-item>
     </van-list>
+    <div v-else>
+      <room-item v-for="item in list" :key="item.id" :data="item"></room-item>
+    </div>
   </div>
 </template>
 
 <script>
 import RoomItem from './RoomItem.vue';
 import initHomeRoomList from '/@compositions/HomeRoomList';
+import initMapRoomList from '/@compositions/MapRoomList.js';
 export default {
   name: 'RoomList',
   components: {
@@ -41,6 +45,9 @@ export default {
     switch (props.type) {
       case '0':
         return initHomeRoomList(props);
+      case '1':
+        return initMapRoomList();
+        break;
     }
   }
 };
