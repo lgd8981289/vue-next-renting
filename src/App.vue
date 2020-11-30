@@ -1,4 +1,5 @@
 <template>
+  <!-- 绑定 key 解决同页面跳转的问题 -->
   <router-view v-slot="{ Component }">
     <transition :name="transitionName">
       <keep-alive :include="virtualTaskStack">

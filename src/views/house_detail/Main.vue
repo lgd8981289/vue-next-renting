@@ -1,8 +1,8 @@
 <template>
-  <div class="house-detail">
+  <div class="house-detail" @scroll="onScroll" ref="houseDetail">
     <div class="house-detail-container" v-if="detailData">
       <!-- navBar -->
-      <house-detail-nav-bar :title="detailData.name"></house-detail-nav-bar>
+      <house-detail-nav-bar :title="detailData.name" :style="navBarStyle"></house-detail-nav-bar>
       <!-- swiper -->
       <house-detail-swiper :data="detailData"></house-detail-swiper>
       <!-- 描述文本 -->
@@ -16,6 +16,8 @@
 </template>
 
 <script>
+// 滚动渐变极限
+const SCROLL_CHANGE_HEIGHT = 280;
 import HouseDetailNavBar from './components/HouseDetailNavBar.vue';
 import HouseDetailSwiper from './components/HouseDetailSwiper.vue';
 import HouseDetailDesc from './components/HouseDetailDesc.vue';
@@ -33,7 +35,11 @@ export default {
   },
   data() {
     return {
-      detailData: null
+      detailData: null,
+      scrollTop: 0,
+      navBarStyle: {
+        backgroundColor: 'rgba(38, 206, 151, 0)'
+      }
     };
   },
   created() {
@@ -44,7 +50,16 @@ export default {
       this.detailData = await getHouse({
         houseId: this.$route.query.houseId
       });
+    },
+    onScroll(event) {
+      this.scrollTop = event.target.scrollTop;
+      this.navBarStyle.backgroundColor = `rgba(38, 206, 151, ${
+        this.scrollTop / SCROLL_CHANGE_HEIGHT
+      })`;
     }
+  },
+  activated() {
+    this.$refs.houseDetail.scrollTop = this.scrollTop;
   }
 };
 </script>

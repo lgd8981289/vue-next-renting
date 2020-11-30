@@ -2,8 +2,6 @@
   <div class="house-detail-map">
     <p class="house-detail-map-title">路线规划</p>
     <div class="house-detail-map-container" ref="container"></div>
-    <van-popup v-model:show="isShowNavgationPop" position="bottom" :style="{ height: '100%' }">
-    </van-popup>
   </div>
 </template>
 
