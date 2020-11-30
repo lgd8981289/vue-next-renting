@@ -15,3 +15,11 @@ export const getList = (params) => {
     params
   });
 };
+
+export const getHouse = (params) => {
+  return http({
+    url: '/api/getHouse',
+    method: 'GET',
+    params
+  });
+};
