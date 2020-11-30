@@ -17,7 +17,8 @@ import {
   Skeleton,
   Cell,
   Row,
-  Col
+  Col,
+  Loading
 } from 'vant';
 import 'vant/lib/index.css';
 
@@ -41,4 +42,5 @@ export default function initVant(app) {
   app.use(Cell);
   app.use(Row);
   app.use(Col);
+  app.use(Loading);
 }

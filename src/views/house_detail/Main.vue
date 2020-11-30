@@ -3,8 +3,27 @@
     <div class="house-detail-container" v-if="detailData">
       <!-- navBar -->
       <house-detail-nav-bar :title="detailData.name" :style="navBarStyle"></house-detail-nav-bar>
-      <!-- swiper -->
-      <house-detail-swiper :data="detailData"></house-detail-swiper>
+      <div class="house-detail-container-display">
+        <!-- 3D 全景 -->
+        <house-detail-panorama :data="detailData" v-if="!isShowSwiper"></house-detail-panorama>
+        <!-- swiper -->
+        <house-detail-swiper :data="detailData" v-else></house-detail-swiper>
+        <!-- swiper 和 3D 的切换 -->
+        <van-tag
+          class="house-detail-container-display-panorama"
+          :class="{ 'house-detail-container-display-active': !isShowSwiper }"
+          round
+          @click="onDisplayClick(false)"
+          >全景</van-tag
+        >
+        <van-tag
+          class="house-detail-container-display-swiper"
+          :class="{ 'house-detail-container-display-active': isShowSwiper }"
+          round
+          @click="onDisplayClick(true)"
+          >图示</van-tag
+        >
+      </div>
       <!-- 描述文本 -->
       <house-detail-desc :data="detailData"></house-detail-desc>
       <!-- 路线规划 -->
@@ -20,6 +39,7 @@
 const SCROLL_CHANGE_HEIGHT = 280;
 import HouseDetailNavBar from './components/HouseDetailNavBar.vue';
 import HouseDetailSwiper from './components/HouseDetailSwiper.vue';
+import HouseDetailPanorama from './components/HouseDetailPanorama.vue';
 import HouseDetailDesc from './components/HouseDetailDesc.vue';
 import HouseDetailMap from './components/HouseDetailMap.vue';
 import HomeRoomList from '/@components/RoomList.vue';
@@ -31,7 +51,8 @@ export default {
     HouseDetailSwiper,
     HouseDetailDesc,
     HouseDetailMap,
-    HomeRoomList
+    HomeRoomList,
+    HouseDetailPanorama
   },
   data() {
     return {
@@ -39,7 +60,8 @@ export default {
       scrollTop: 0,
       navBarStyle: {
         backgroundColor: 'rgba(38, 206, 151, 0)'
-      }
+      },
+      isShowSwiper: false
     };
   },
   created() {
@@ -73,6 +95,26 @@ export default {
   overflow-y: scroll;
   &-container {
     width: 100vw;
+    &-display {
+      position: relative;
+      .van-tag {
+        padding: 2px 10px;
+        position: absolute;
+        right: 18px;
+        background-color: rgba(51, 51, 51, 0.6);
+      }
+
+      &-panorama {
+        top: 40%;
+      }
+      &-swiper {
+        top: 55%;
+      }
+
+      &-active {
+        background-color: $mainColor !important;
+      }
+    }
   }
 }
 </style>
