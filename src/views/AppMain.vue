@@ -34,7 +34,11 @@ export default {
       currentComponent: 'home'
     };
   },
-  created() {}
+  created() {
+    this.$emitter.on('toMap', () => {
+      this.currentComponent = 'map';
+    });
+  }
 };
 </script>
 
