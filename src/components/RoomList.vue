@@ -19,6 +19,7 @@
 import RoomItem from './RoomItem.vue';
 import initHomeRoomList from '/@compositions/HomeRoomList';
 import initMapRoomList from '/@compositions/MapRoomList.js';
+import initRecommendRoomList from '/@compositions/RecommendRoomList.js';
 export default {
   name: 'RoomList',
   components: {
@@ -48,6 +49,8 @@ export default {
       case '1':
         return initMapRoomList();
         break;
+      case '2':
+        return initRecommendRoomList(props);
     }
   }
 };

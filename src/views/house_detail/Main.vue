@@ -9,6 +9,8 @@
       <house-detail-desc :data="detailData"></house-detail-desc>
       <!-- 路线规划 -->
       <house-detail-map :data="detailData"></house-detail-map>
+      <!-- 推荐楼盘 -->
+      <home-room-list type="2" :houseId="$route.query.houseId"></home-room-list>
     </div>
   </div>
 </template>
@@ -18,6 +20,7 @@ import HouseDetailNavBar from './components/HouseDetailNavBar.vue';
 import HouseDetailSwiper from './components/HouseDetailSwiper.vue';
 import HouseDetailDesc from './components/HouseDetailDesc.vue';
 import HouseDetailMap from './components/HouseDetailMap.vue';
+import HomeRoomList from '/@components/RoomList.vue';
 import { getHouse } from '/@api/house';
 export default {
   name: 'HouseDetail',
@@ -25,7 +28,8 @@ export default {
     HouseDetailNavBar,
     HouseDetailSwiper,
     HouseDetailDesc,
-    HouseDetailMap
+    HouseDetailMap,
+    HomeRoomList
   },
   data() {
     return {
@@ -45,4 +49,15 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+@import 'src/assets/css/constant.scss';
+.house-detail {
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  overflow-y: scroll;
+  &-container {
+    width: 100vw;
+  }
+}
+</style>
