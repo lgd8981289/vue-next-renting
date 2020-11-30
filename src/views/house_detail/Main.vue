@@ -7,6 +7,8 @@
       <house-detail-swiper :data="detailData"></house-detail-swiper>
       <!-- 描述文本 -->
       <house-detail-desc :data="detailData"></house-detail-desc>
+      <!-- 路线规划 -->
+      <house-detail-map :data="detailData"></house-detail-map>
     </div>
   </div>
 </template>
@@ -15,13 +17,15 @@
 import HouseDetailNavBar from './components/HouseDetailNavBar.vue';
 import HouseDetailSwiper from './components/HouseDetailSwiper.vue';
 import HouseDetailDesc from './components/HouseDetailDesc.vue';
+import HouseDetailMap from './components/HouseDetailMap.vue';
 import { getHouse } from '/@api/house';
 export default {
   name: 'HouseDetail',
   components: {
     HouseDetailNavBar,
     HouseDetailSwiper,
-    HouseDetailDesc
+    HouseDetailDesc,
+    HouseDetailMap
   },
   data() {
     return {
