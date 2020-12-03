@@ -6,7 +6,7 @@
 
 我们可以通过下面的 `gif` 图片来对 `vue-next-renting` 有一个更深的了解（[图片未打开？](http://res.lgdsunday.club/renting-overview.gif)）。
 
-<img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/bc6773e503d643d08795c35816c220f2~tplv-k3u1fbpfcp-zoom-1.image" alt="renting-overview" />
+<img src="https://github.com/lgd8981289/vue-next-renting/blob/master/renting-overview.gif" alt="renting-overview" />
 
 ## 项目将遵循的 git 规范
 
