@@ -117,14 +117,20 @@ export default {
         });
         if (this.level === level) return;
         this.level = level;
-        this.initMarkerData();
+        // 模拟数据的临时IDs
+        const cityIds = ['600', '642', '17620'];
+        this.initMarkerData({
+          id: cityIds[this.level]
+        });
       });
 
       map.on('zoomend', () => {
         this.isAutoZoom = false;
       });
 
-      this.initMarkerData('600');
+      this.initMarkerData({
+        id: '600'
+      });
     },
     /**
      * 根据数据设置覆盖物
