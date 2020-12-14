@@ -46,11 +46,11 @@ v 1.0.0 版本代码已全部提交完成
     - 1-1：[简介](https://www.bilibili.com/video/BV1vi4y157p4?p=1)
     - 1-2：[项目演示](https://www.bilibili.com/video/BV1vi4y157p4?p=2)
     - 1-3：[课程设计与你的收获](https://www.bilibili.com/video/BV1vi4y157p4?p=3)
-  - 第二章：Vue 3 新特性 与 vite 讲解
-    - 2-1：Vue 3 新特性寻览
-    - 2-2：什么是 Composition（组合式） API ？
-    - 2-3：入口函数 - setup
-    - 2-4：新的响应式机制 - Proxy
+  - - 第二章：Vue 3 新特性 与 vite 讲解
+    - 2-1：[为什么要使用 Composition（组合式） API](https://www.bilibili.com/video/BV1vi4y157p4?p=5)
+    - 2-2：[入口函数 - setup](https://www.bilibili.com/video/BV1vi4y157p4?p=6)
+    - 2-3：[新的响应式机制-proxy](https://www.bilibili.com/video/BV1vi4y157p4?p=7)
+    - 2-4：[proxy 实现简单的响应式数据渲染](https://www.bilibili.com/video/BV1vi4y157p4?p=8)
     - 2-5：使用 ref 创建响应式变量
     - 2-6：响应式基础 API - reactive
     - 2-7：setup 函数中的 生命周期钩子
