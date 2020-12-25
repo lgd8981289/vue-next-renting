@@ -51,9 +51,9 @@ v 1.0.0 版本代码已全部提交完成
     - 2-2：[入口函数 - setup](https://www.bilibili.com/video/BV1vi4y157p4?p=6)
     - 2-3：[新的响应式机制-proxy](https://www.bilibili.com/video/BV1vi4y157p4?p=7)
     - 2-4：[proxy 实现简单的响应式数据渲染](https://www.bilibili.com/video/BV1vi4y157p4?p=8)
-    - 2-5：使用 ref 创建响应式变量
-    - 2-6：响应式基础 API - reactive
-    - 2-7：setup 函数中的 生命周期钩子
+    - 2-5：[使用 ref 创建响应式变量](https://www.bilibili.com/video/BV1vi4y157p4?p=9)
+    - 2-6：[reactive 配合 toRefs 解析响应式](https://www.bilibili.com/video/BV1vi4y157p4?p=10)
+    - 2-7：[setup 函数中的 生命周期钩子](https://www.bilibili.com/video/BV1vi4y157p4?p=11)
     - 2-8：setup 函数中的 watch 响应式变更
     - 2-9：setup 函数中的 computed 属性
     - 2-10：setup 函数中的 Provide / Inject
